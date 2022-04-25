@@ -37,7 +37,7 @@ export function call(api, method, request) {
         .catch(error => {
             console.log("error : " + error.status);
 
-            window.location.href = "/login";
+            //window.location.href = "/login";
             return Promise.reject(error);
         })
 
