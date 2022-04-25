@@ -21,7 +21,7 @@ export default class AddTodo extends Component {
     }
 
     enterKeyEventHandler = (e) => {
-        if(e.key == 'Enter') {
+        if(e.key === 'Enter') {
             this.onButtonClick();
         }
     }
