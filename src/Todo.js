@@ -1,5 +1,5 @@
 import { Checkbox, IconButton, InputBase, ListItem, ListItemSecondaryAction, ListItemText } from '@mui/material';
-import { DeleteOutlined, ThreeSixty } from '@mui/icons-material';
+import { DeleteOutlined} from '@mui/icons-material';
 import React, { Component } from 'react'
 
 export default class Todo extends Component {
@@ -16,7 +16,7 @@ export default class Todo extends Component {
     
     checkboxEventHandler = (e) => {
         const thisItem = this.state.item;
-        if(thisItem.done == true) {
+        if(thisItem.done === true) {
             thisItem.done = false;
         } else {
             thisItem.done = true
@@ -34,7 +34,7 @@ export default class Todo extends Component {
     }
 
     enterKeyEnventHandler = (e) => {
-        if (e.key == "Enter") {
+        if (e.key === "Enter") {
             this.setState({readOnly: true}, () => {
                 console.log('readOnly? ', this.state.readOnly);
                 console.log('items: ', this.state.items);

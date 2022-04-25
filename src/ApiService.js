@@ -24,7 +24,7 @@ export function call(api, method, request) {
         .then((response) =>
             response.json().then((json) => {
                 if (!response.ok) {
-                    if (json.error == "Login failed") {
+                    if (json.error === "Login failed") {
                         alert("아이디 또는 비밀번호가 일치하지 않습니다.");
                         return;
                     }
@@ -36,8 +36,8 @@ export function call(api, method, request) {
 
         .catch(error => {
             console.log("error : " + error.status);
-
-            //window.location.href = "/login";
+            alert("페이지 이동합니다.");
+            window.location.href = "/login";
             return Promise.reject(error);
         })
 
