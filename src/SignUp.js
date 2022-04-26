@@ -17,7 +17,7 @@ export default class SignUp extends Component {
         const password = data.get("password");
         signup({ email: email, username: username, password: password }).then(
             (response) => {
-                // window.location.href = "/login";
+                 window.location.href = "/login";
             }
         )
     }

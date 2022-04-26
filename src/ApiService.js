@@ -36,7 +36,6 @@ export function call(api, method, request) {
 
         .catch(error => {
             console.log("error : " + error.status);
-            alert("페이지 이동합니다.");
             window.location.href = "/login";
             return Promise.reject(error);
         })

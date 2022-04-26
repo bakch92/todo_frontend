@@ -13,7 +13,10 @@ export default class Login extends React.Component {
         const data = new FormData(event.target);
         const email = data.get("email");
         const password = data.get("password");
-        signin({email: email, password: password});
+        signin({email: email, password: password}).then((response) => 
+        response.json().then((json) => {
+            console.log("response data: " + json.email);
+        }))
     }
 
     render() {
