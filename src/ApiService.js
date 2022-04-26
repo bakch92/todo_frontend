@@ -36,7 +36,7 @@ export function call(api, method, request) {
 
         .catch(error => {
             console.log("error : " + error.status);
-            window.location.href = "/login";
+           // window.location.href = "/login";
             return Promise.reject(error);
         })
 
@@ -44,8 +44,8 @@ export function call(api, method, request) {
 
 export function signin(userDTO) {
     return call("/auth/signin", "POST", userDTO).then((response) => {
-        if (response.token) {
-            localStorage.setItem(ACCESS_TOKEN, response.token);
+        if (response.username) {
+            localStorage.setItem(ACCESS_TOKEN, response.username);
             window.location.href = "/";
         }
     })
